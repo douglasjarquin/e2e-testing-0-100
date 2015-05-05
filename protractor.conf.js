@@ -1,6 +1,6 @@
 exports.config = {
 
-  baseUrl: 'https://www.zumba.com',
+  rootElement: 'div',
   seleniumAddress: 'http://localhost:4444/wd/hub',
   specs: ['features/*.feature'],
   framework: 'cucumber',
