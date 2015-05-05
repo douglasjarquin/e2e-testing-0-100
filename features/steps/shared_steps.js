@@ -2,9 +2,15 @@ var sharedSteps = function() {
 
   this.World = require('../worlds/protractor.js').World;
 
-  this.Given(/^I am on the homepage$/, function (callback) {
+  this.Given(/^that there are Zumba classes in my area$/, function (callback) {
 
-    browser.driver.get('https://www.zumba.com/en-US/').then(function() {
+    callback();
+
+  });
+
+  this.When(/^I visit the classes near me search$/, function (callback) {
+
+    browser.driver.get('https://www.zumba.com/en-US/party/nearMe').then(function() {
 
       browser.driver.getTitle().then(function(title) {
 
@@ -13,16 +19,6 @@ var sharedSteps = function() {
         callback();
 
       }.bind(this));
-    }.bind(this));
-
-  });
-
-  this.When(/^I browse to find a class$/, function (callback) {
-
-    browser.driver.findElement(by.linkText('Find a Class')).click().then( function () {
-
-      callback();
-
     }.bind(this));
 
   });
@@ -36,7 +32,7 @@ var sharedSteps = function() {
       this.assert.equal(message, 'Classes within ' + radius + ' miles of your area');
       callback();
 
-    })
+    }.bind(this));
 
   });
 

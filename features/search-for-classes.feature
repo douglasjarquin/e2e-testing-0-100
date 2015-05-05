@@ -4,8 +4,8 @@ Feature: Class search
 
   @geoip
   Scenario: Search for classes near me
-    Given I am on the homepage
-    When I browse to find a class
+    Given that there are Zumba classes in my area
+    When I visit the classes near me search
     Then I should see classes within 50 miles of my area
 
   @zip_code
