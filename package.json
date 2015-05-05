@@ -1,0 +1,24 @@
+{
+  "name": "e2e-testing-0-100",
+  "version": "1.0.0",
+  "description": "Code Examples for e2e Testing presentation",
+  "main": "index.js",
+  "scripts": {
+    "test": "protractor"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/douglasjarquin/e2e-testing-0-100.git"
+  },
+  "author": "Douglas Jarquin",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/douglasjarquin/e2e-testing-0-100/issues"
+  },
+  "homepage": "https://github.com/douglasjarquin/e2e-testing-0-100",
+  "dependencies": {
+    "chai": "^2.3.0",
+    "cucumber": "^0.4.8",
+    "protractor": "^2.0.0"
+  }
+}
