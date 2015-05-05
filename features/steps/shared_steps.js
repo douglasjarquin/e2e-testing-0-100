@@ -4,9 +4,9 @@ var sharedSteps = function() {
 
   this.Given(/^I am on the homepage$/, function (callback) {
 
-    browser.get('/').then(function() {
+    browser.driver.get('https://www.zumba.com/en-US/').then(function() {
 
-      driver.getTitle().then(function(title) {
+      browser.driver.getTitle().then(function(title) {
 
         this.expect(title).to.equal('Zumba - Ditch the Workout, Join the Party');
 
@@ -19,7 +19,7 @@ var sharedSteps = function() {
 
   this.When(/^I browse to find a class$/, function (callback) {
 
-    driver.findElement(by.linkText('Find a Class')).click().then( function () {
+    browser.driver.findElement(by.linkText('Find a Class')).click().then( function () {
 
       callback();
 
@@ -31,7 +31,7 @@ var sharedSteps = function() {
 
     var radius = radius;
 
-    driver.findElement(by.css('h3.sub-sub-head')).getText().then( function (message) {
+    browser.driver.findElement(by.css('h3.sub-sub-head')).getText().then( function (message) {
 
       this.assert.equal(message, 'Classes within ' + radius + ' miles of your area');
       callback();
